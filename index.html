@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Trusted COD Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{margin:0;font-family:Arial;background:#f6f6f6}
+header{background:#000;color:#fff;padding:15px;text-align:center;font-size:22px}
+.container{max-width:1200px;margin:auto;padding:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:10px}
+.card img{width:100%;border-radius:6px;cursor:pointer}
+.card h3{margin:10px 0 5px;font-size:16px}
+.price{color:#e91e63;font-weight:bold}
+.btn{background:#e91e63;color:#fff;padding:10px;border:none;width:100%;border-radius:5px;cursor:pointer}
+.btn:hover{opacity:.9}
+
+/* Order Form */
+#order{display:none;background:#fff;padding:20px;border-radius:8px;margin-top:30px}
+input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px}
+.submit{background:#000;color:#fff;padding:12px;border:none;width:100%;border-radius:6px;font-size:16px}
+
+/* Popup */
+#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6)}
+.popup-box{background:#fff;padding:30px;border-radius:8px;width:90%;max-width:400px;margin:120px auto;text-align:center}
+
+/* WhatsApp */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;
+padding:12px 15px;border-radius:50%;
+font-size:22px;text-decoration:none;
+box-shadow:0 2px 6px rgba(0,0,0,.3)
+}
+</style>
+</head>
+
+<body>
+
+<header>🔥 Trusted COD Store 🔥</header>
+
+<div class="container">
+
+<!-- PRODUCT GRID -->
+<div class="grid">
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Stylish Shirt')">
+    <h3>Stylish Shirt</h3>
+    <div class="price">₹499</div>
+    <button class="btn" onclick="buy('Stylish Shirt')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Premium Kurti')">
+    <h3>Premium Kurti</h3>
+    <div class="price">₹699</div>
+    <button class="btn" onclick="buy('Premium Kurti')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Fashion Top')">
+    <h3>Fashion Top</h3>
+    <div class="price">₹399</div>
+    <button class="btn" onclick="buy('Fashion Top')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Men T-Shirt')">
+    <h3>Men T-Shirt</h3>
+    <div class="price">₹349</div>
+    <button class="btn" onclick="buy('Men T-Shirt')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Cotton Saree')">
+    <h3>Cotton Saree</h3>
+    <div class="price">₹999</div>
+    <button class="btn" onclick="buy('Cotton Saree')">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300" onclick="buy('Kids Dress')">
+    <h3>Kids Dress</h3>
+    <div class="price">₹599</div>
+    <button class="btn" onclick="buy('Kids Dress')">Buy Now</button>
+  </div>
+</div>
+
+<section style="background:#fff;padding:30px;margin-top:30px;border-radius:8px">
+<h2 style="text-align:center">Why Customers Trust Us ❤️</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;margin-top:20px">
+  <div>🚚<br><b>Fast Delivery</b><br>3–5 days delivery</div>
+  <div>💰<br><b>Cash on Delivery</b><br>No online payment</div>
+  <div>📞<br><b>Customer Support</b><br>Call / WhatsApp support</div>
+  <div>🔄<br><b>Easy Replacement</b><br>Hassle-free</div>
+</div>
+</section>
+
+<section style="background:#fdf2f6;padding:30px;margin-top:30px;border-radius:8px">
+<h2 style="text-align:center">⭐ Customer Reviews</h2>
+
+<div style="max-width:800px;margin:auto">
+<p>⭐⭐⭐⭐⭐ <b>Rina Das</b> – Kolkata<br>
+Product quality khub bhalo, delivery fast chilo 👍</p>
+
+<p>⭐⭐⭐⭐⭐ <b>Arjun Singh</b> – Delhi<br>
+COD option thakar jonno ami order korechi, trusted site</p>
+
+<p>⭐⭐⭐⭐⭐ <b>Priya Sharma</b> – Mumbai<br>
+Same product as shown, very happy 😊</p>
+</div>
+</section>
+<section style="background:#fdf2f6;padding:30px;margin-top:30px;border-radius:8px">
+<h2 style="text-align:center">⭐ Customer Reviews</h2>
+
+<div style="max-width:800px;margin:auto">
+<p>⭐⭐⭐⭐⭐ <b>Rina Das</b> – Kolkata<br>
+Product quality khub bhalo, delivery fast chilo 👍</p>
+
+<p>⭐⭐⭐⭐⭐ <b>Arjun Singh</b> – Delhi<br>
+COD option thakar jonno ami order korechi, trusted site</p>
+
+<p>⭐⭐⭐⭐⭐ <b>Priya Sharma</b> – Mumbai<br>
+Same product as shown, very happy 😊</p>
+</div>
+</section>
+
+<section style="background:#000;color:#fff;padding:30px;margin-top:30px;border-radius:8px;text-align:center">
+<h2>💯 100% Safe Cash on Delivery</h2>
+<p>No advance payment<br>
+Pay only after receiving product</p>
+<p>Trusted by 10,000+ customers across India 🇮🇳</p>
+</section>
+
+<section style="background:#fff;padding:30px;margin-top:30px;border-radius:8px">
+<h2>📦 Delivery & Return Policy</h2>
+
+<ul>
+<li>🚚 Delivery within 3–7 working days</li>
+<li>💵 Cash on Delivery available</li>
+<li>🔁 Replacement available for damaged product</li>
+<li>📞 Support via WhatsApp & Call</li>
+</ul>
+</section>
+<section style="background:#e91e63;color:#fff;padding:30px;margin-top:30px;border-radius:8px;text-align:center">
+<h2>🔥 Limited Stock Available!</h2>
+<p>High demand product – order now before stock ends</p>
+<p><b>COD | Trusted | Fast Delivery</b></p>
+</section>
+
+
+<!-- ORDER FORM -->
+<div id="order">
+<h2>Place Your COD Order</h2>
+
+<form action="https://formsubmit.co/chandan.bca.ican@gmail.com" method="POST" onsubmit="return thanks()">
+<input type="hidden" name="_subject" value="New COD Order">
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" id="product" name="Product" readonly>
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<textarea name="Address" placeholder="Full Address" required></textarea>
+<input type="text" name="Pincode" placeholder="Pincode" required>
+
+<button class="submit">Submit Order</button>
+</form>
+</div>
+
+</div>
+
+<!-- THANK YOU POPUP -->
+<div id="popup">
+  <div class="popup-box">
+    <h2>✅ Order Placed!</h2>
+    <p>Thank you for your COD order.<br>We will contact you soon.</p>
+    <button class="btn" onclick="closePop()">OK</button>
+  </div>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/917602945485" target="_blank">💬</a>
+
+<script>
+function buy(name){
+ document.getElementById('order').style.display='block';
+ document.getElementById('product').value=name;
+ window.scrollTo(0,document.body.scrollHeight);
+}
+function thanks(){
+ setTimeout(()=>{document.getElementById('popup').style.display='block';},500);
+ return true;
+}
+function closePop(){
+ document.getElementById('popup').style.display='none';
+}
+</script>
+
+</body>
+</html>
