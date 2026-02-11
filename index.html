@@ -159,7 +159,9 @@ Pay only after receiving product</p>
 <form action="https://formsubmit.co/chandan.bca.ican@gmail.com" method="POST" onsubmit="return thanks()">
 <input type="hidden" name="_subject" value="New COD Order">
 <input type="hidden" name="_captcha" value="false">
-
+ <!-- REDIRECT URL -->
+  <input type="hidden" name="_next" value="https://smartdealsindia.github.io/buynow/">
+  
 <input type="text" id="product" name="Product" readonly>
 <input type="text" name="Name" placeholder="Your Name" required>
 <input type="tel" name="Phone" placeholder="Phone Number" required>
@@ -201,3 +203,4 @@ function closePop(){
 
 </body>
 </html>
+
